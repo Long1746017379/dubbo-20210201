@@ -17,7 +17,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <es.version>7.3.2</es.version>
     </properties>
 
     <dependencies>
@@ -26,24 +25,15 @@
             <groupId>com.tydic.dubbo</groupId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <!--单元测试-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <!--QZ定时任务框架-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
 
         <!--Dubbo -->
@@ -115,44 +105,6 @@
             <artifactId>apollo-client</artifactId>
             <version>${apollo-client.version}</version>
         </dependency>
-
-        <!--DB start-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.4</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
-            <scope>runtime</scope>
-        </dependency>
-        <!--DB end-->
-
-        <!-- elasticsearch start-->
-        <dependency>
-            <groupId>org.elasticsearch.client</groupId>
-            <artifactId>elasticsearch-rest-client</artifactId>
-            <version>${es.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.elasticsearch.client</groupId>
-            <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>${es.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>${es.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-elasticsearch -->
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-elasticsearch</artifactId>
-            <version>3.0.5.RELEASE</version>
-        </dependency>
-        <!-- elasticsearch end-->
 
 
     </dependencies>
