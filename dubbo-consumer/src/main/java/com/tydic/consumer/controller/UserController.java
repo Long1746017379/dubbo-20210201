@@ -1,8 +1,11 @@
 package com.tydic.consumer.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.tydic.api.service.user.UserService;
 import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -30,6 +33,13 @@ public class UserController {
         return rsp;
     }
 
-
+    @PostMapping(value = "/sub")
+    public int sub(@RequestBody JSONObject jsonObject){
+        Integer num1 = jsonObject.getInteger("num1");
+        Integer num2 = jsonObject.getInteger("num2");
+        int sub = userService.sub(num1, num2);
+        System.out.println(sub);
+        return sub;
+    }
 
 }
